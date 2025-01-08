@@ -1,0 +1,251 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10;
+    padding: 10;
+    background-color: #333;
+    /*color: ;*/
+    /*background: url('/static/images/osteoporos.jpeg') no-repeat center center fixed;
+    /*background-size: cover;*/
+    background-size: 80%; 
+    background: url('/static/images/osteoporosis.jpg') no-repeat center center fixed;
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form header */
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 1.1em;
+    color: #333;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Button styling */
+button.btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Gender radio buttons */
+.form-group label[for="female"],
+.form-group label[for="male"] {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Result styling */
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Header styling */
+header {
+    background-color: rgba(111, 214, 77, 0.7); /* Dark background with transparency */
+    color: rgb(227, 214, 214);
+    padding: 20px;
+    text-align: center;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* This creates a semi-transparent black layer */
+    z-index: -1; /* Ensure the overlay stays behind the content */
+}
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better visibility */
+}
+
+/* Navigation styling */
+nav {
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #008CBA; /* Button-like color */
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #008CBA; /* Underline effect */
+}
+
+/* Section styling */
+section.intro {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+section.intro p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    section.intro {
+        width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+table {
+    margin-top: 30px auto;
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+thead {
+    background-color: #ff9800;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #f1c40f;
+    color: white;
+}
+
+/* Page Header */
+h1 {
+    margin: 30px 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 18px;
+    color: #2C3E50; /* Darker shade of gray for the text */
+    line-height: 1.8; /* Increased line height for readability */
+    text-align: justify; /* Justify text for a cleaner look */
+    background-color: rgba(218, 236, 124, 0.8); /* Light translucent background */
+    padding: 30px; /* More padding around the paragraph */
+    margin: 50px auto; /* More margin for space around */
+    width: 100%; /* Set width to 80% of the container */
+    max-width: 1000px; /* Limit the maximum width */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    font-family: 'Arial', sans-serif; /* A clean, readable font */
+    background-image: linear-gradient(to right, #f2f2f2, #e6f7ff); /* Soft gradient background */
+}
+
+/* Optional: Add media query for responsiveness */
+@media (max-width: 768px) {
+    p {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 15px;
+    }
+}

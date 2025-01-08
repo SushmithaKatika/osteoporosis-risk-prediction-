@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osteoporosis Risk Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict Osteoporosis Risk</a></li>
+            <li><a href="/show_predictions">View Predictions</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Osteoporosis Risk Prediction</h1>
+        <form id="prediction-form" method="POST">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label><br>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="1" required> Female
+                </label>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="0" required> Male
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="calcium_intake">Calcium Intake (mg/day):</label>
+                <select name="calcium_intake" required>
+                    <option value="500">500</option>
+                    <option value="700">700</option>
+                    <option value="900">900</option>
+                    <!-- Add more options if needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="bone_density">Bone Density:</label>
+                <select name="bone_density" required>
+                    <option value="0.5">0.5</option>
+                    <option value="0.7">0.7</option>
+                    <option value="1.0">1.0</option>
+                    <!-- Add more options if needed -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Predict Risk</button>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osteoporosis Predictions</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+        <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Predict Osteoporosis Risk</a></li>
+            <li><a href="/show_predictions">View Predictions</a></li>
+        </ul>
+    </nav>
+    <h1>Stored Osteoporosis Predictions</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Calcium Intake (mg/day)</th>
+                <th>Bone Density (g/cm²)</th>
+                <th>Risk (Numeric)</th>
+                <th>Risk (Text)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td> <!-- ID -->
+                <td>{{ row[1] }}</td> <!-- Age -->
+                <td>{{ 'Female' if row[2] == 1 else 'Male' }}</td> <!-- Gender -->
+                <td>{{ row[3] }}</td> <!-- Calcium Intake -->
+                <td>{{ row[4] }}</td> <!-- Bone Density -->
+                <td>{{ row[5] }}</td> <!-- Risk (Numeric) -->
+                <td>{{ row[6] }}</td> <!-- Risk (Text) -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
